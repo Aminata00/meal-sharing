@@ -1,16 +1,17 @@
 import knex from "knex";
+import dotenv from "dotenv";
 
-const connection = knex({
-  client: process.env.DB_CLIENT,
+dotenv.config();
+
+const db = knex({
+  client: "mysql2",
   connection: {
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    user: process.env.DB_USER,
+    host: process.env.DB_HOST || "127.0.0.1",
+    user: process.env.DB_USER || "root",
     password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE_NAME,
-    ssl:
-      process.env.DB_USE_SSL === "true" ? { rejectUnauthorized: false } : false,
+    database: process.env.DB_NAME || "MEALS",
+    port: process.env.DB_PORT || 3306,
   },
 });
 
-export default connection;
+export default db;
