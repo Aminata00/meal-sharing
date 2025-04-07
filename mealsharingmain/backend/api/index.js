@@ -3,8 +3,8 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import mealsRouter from "./routes/meals.js"; 
-import knex from "./database_clipimport express" ;
-import reservationRouter from "./routers/reservations.js";
+import knex from "./database_clipimport express.js" ;
+import reservationRouter from "./routes/reservations.js";
 
 const app = express();
 const port = process.env.PORT || 3000;

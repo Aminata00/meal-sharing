@@ -1,5 +1,5 @@
 import express from "express";
-import knex from "../database_client.js"; 
+import knex from "backend/database_client.js"; 
 
 const mealsRouter = express.Router();
 import nestedRouter from "./nested.js"; 
