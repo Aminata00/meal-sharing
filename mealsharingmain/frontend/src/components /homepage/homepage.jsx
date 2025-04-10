@@ -1,11 +1,11 @@
 import React from "react";
-import MealsList from "/mealsList/mealsList.jsx"; 
+import MealsList from "./mealsList/mealslist.jsx";
 
 const HomePage = () => {
   return (
     <div>
-      <h1>Welcome to the Meal Sharing App</h1>
-      <MealsList /> {MealsList}
+      <h1>Welcome to Meal Sharing!</h1>
+      <MealsList />
     </div>
   );
 };
